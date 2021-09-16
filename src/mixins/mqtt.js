@@ -189,7 +189,6 @@ const MqttMixin = {
      */
     initMqtt(options) {
       options.time = moment(new Date()).format('YYYY-MM-DD HH:mm:ss.SSS')
-      let _this = this
       if (_.isEmpty(options.clientId)) {
         console.info(
           '%c%s',

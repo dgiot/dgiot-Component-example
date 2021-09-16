@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+// eslint-disable
 import Vue from 'vue'
 import md5 from 'md5'
 /**
