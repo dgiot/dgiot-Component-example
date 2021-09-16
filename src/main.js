@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Bus from './bus'
-import store from './store'
-import MqttMixin from './mixins/mqtt'
-Vue.use(Bus)
+import dgiotStore from '@dgiot/dgiot-mqtt-dashboard/src/store'
+import dgiotBus from '@dgiot/dgiot-mqtt-dashboard/src/utils/bus'
+import dgiotMixin from '@dgiot/dgiot-mqtt-dashboard/src/mixins/mqtt'
+Vue.use(dgiotBus)
+Vue.mixin(dgiotMixin)
 Vue.config.productionTip = false
-Vue.mixin(MqttMixin)
 new Vue({
-  store,
+  dgiotStore,
   render: h => h(App),
 }).$mount('#app')

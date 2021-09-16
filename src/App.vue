@@ -12,7 +12,10 @@ export default {
   name: 'App',
   components: {
     dgiotMqttDashboard
-  }
+  },
+  mounted() {
+    console.log(this.Store)
+  },
 }
 </script>
 
