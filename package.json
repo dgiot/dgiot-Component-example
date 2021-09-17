@@ -1,16 +1,21 @@
 {
-  "name": "example",
+  "name": "dgiot-Component-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "commit": "git cz",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@dgiot/dgiot-mqtt-dashboard": "^1.0.8",
+    "@dgiot/dgiot-mqtt-dashboard": "^1.1.2-alpha",
     "babel-plugin-component": "^1.1.1",
+    "commitizen": "^4.2.4",
+    "conventional-changelog": "^3.1.24",
     "core-js": "^3.6.5",
+    "cz-customizable": "^6.3.0",
     "element-ui": "^2.15.6",
     "loadsh": "^0.0.4",
     "md5": "^2.3.0",
@@ -22,13 +27,28 @@
     "vuex-persistedstate": "^4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^7.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "eslintConfig": {
     "root": true,
