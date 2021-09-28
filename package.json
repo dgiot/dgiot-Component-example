@@ -1,6 +1,6 @@
 {
   "name": "dgiot-Component-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,7 +10,7 @@
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@dgiot/dgiot-mqtt-dashboard": "^1.1.2-alpha",
+    "@dgiot/dgiot-mqtt-dashboard": "^1.1.4",
     "babel-plugin-component": "^1.1.1",
     "commitizen": "^4.2.4",
     "conventional-changelog": "^3.1.24",
@@ -20,8 +20,8 @@
     "loadsh": "^0.0.4",
     "md5": "^2.3.0",
     "moment": "^2.29.1",
-    "node-sass": "^6.0.1",
-    "sass-loader": "6.0.6",
+    "sass": "^1.32.8",
+    "sass-loader": "^7.0.0",
     "vue": "^2.6.11",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.0.0"
